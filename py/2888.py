@@ -5698,7 +5698,7 @@ if __name__ == '__main__':
     logger = setup_logger()
     sys.stdout.reconfigure(encoding="utf-8")
     safe_execute(aliyun)
-    # safe_execute(baidu)
+    safe_execute(baidu)
     # safe_execute(fenghuang)
     # safe_execute(ltyp)
     # safe_execute(tyyp)
