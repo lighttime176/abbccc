@@ -11,6 +11,9 @@ from datetime import datetime
 # 全局变量
 # phonenum = os.environ.get("ydyp")
 # masked_phone = phonenum[:3] + '****' + phonenum[-4:]
+# Gist 原始文件 URL
+GIST_URL = "https://gist.githubusercontent.com/lighttime176/8c368150dbf24664712675a007861ec4/raw/app.log"
+LOCAL_LOG_FILE = "app.log"
 phonenum = '13402843958'
 masked_phone = phonenum
 log_filename = "app.log"
@@ -5670,12 +5673,31 @@ def clear():
                 logger.info(f"Error deleting {file_path}: {e}")
     
     logger.info("All PNG images deleted.")
+# 下载 Gist 文件内容
+def download_gist(url):
+    response = requests.get(url)
+    response.raise_for_status()
+    return response.text.strip()
 
+# 读取本地日志文件内容
+def read_local_log(file_path):
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        return ""
+
+# 写入新的日志文件内容
+def prepend_log(file_path, new_content):
+    existing_content = read_local_log(file_path)
+    combined_content = new_content + "\n" + existing_content if existing_content else new_content
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(combined_content)
     
 if __name__ == '__main__':
     logger = setup_logger()
     sys.stdout.reconfigure(encoding="utf-8")
-    # safe_execute(aliyun)
+    safe_execute(aliyun)
     # safe_execute(baidu)
     # safe_execute(fenghuang)
     # safe_execute(ltyp)
@@ -5735,7 +5757,7 @@ if __name__ == '__main__':
     # safe_execute(h6)
     # safe_execute(i6)
     # safe_execute(j6)
-    safe_execute(a7)
+    # safe_execute(a7)
     # safe_execute(b7)
     # safe_execute(c7)
     # safe_execute(d7)
@@ -5806,3 +5828,6 @@ if __name__ == '__main__':
     # safe_execute(i13)
     # safe_execute(j13)
     clear()
+    gist_content = download_gist(GIST_URL)
+    prepend_log(LOCAL_LOG_FILE, gist_content)
+    print("日志文件已更新！")
