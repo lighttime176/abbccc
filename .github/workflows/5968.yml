@@ -1,0 +1,56 @@
+# 该 workflow 将安装 Python 依赖，运行代码，并提交更新到 GitHub
+
+name: 5968
+
+on:
+  #schedule:
+    # 设置为 UTC 时间，UTC23点对应北京时间7点
+    #- cron: '00 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+
+    - name: 设置 Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'  # 启用 pip 缓存，加速安装
+
+    - name: 安装依赖
+      run: pip install -r requirements.txt
+
+    - name: 运行 Python 代码
+      run: python py/5968.py
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        ydyp: ${{ secrets.ydyp }}
+
+    - name: 提交更改
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add 5968.log
+        git diff --cached --quiet || git commit -m "Updated logs from GitHub Actions"
+
+    - name: 解决冲突并推送更改
+      run: |
+        git fetch origin main
+        git reset --soft origin/main  # 软重置到远程最新状态，保留本地改动
+        git add 5968.log
+        git commit --amend --no-edit  # 合并到上次提交，避免新建提交
+        git push origin main --force  # 强制推送
+
