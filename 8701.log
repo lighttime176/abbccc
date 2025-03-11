@@ -195,3 +195,11 @@ Version: 4.1.0.17
 2025-03-10 20:17:21 - INFO - Deleted: .\ngbj.png
 2025-03-10 20:17:21 - INFO - Deleted: .\tt.png
 2025-03-10 20:17:21 - INFO - All PNG images deleted.
+2025-03-11 13:27:40 - INFO - ----阿里云13520028701----：{'success': True}
+2025-03-11 13:28:01 - INFO - ----百度13520028701----：bd__cbs__rg0w9i({"errno":18,"msg":"\u8bf7\u586b\u5199\u9a8c\u8bc1\u7801","vcodestr":"njP861b3ea82b4722860200189fac01700991b07d86f101f0b9","vcodesign":"df160068a0","isslide":null})
+2025-03-11 13:28:08 - INFO - ----凤凰网13520028701----：{'code': 'CaptchaRequired', 'msg': 'code: CaptchaRequired, msg: 需要验证码', 'tips': '需要验证码'}
+2025-03-11 13:28:33 - INFO - ----联通云盘13520028701----：{'STATUS': '200', 'MSG': '服务调用成功！', 'LOGID': None, 'RSP': {'RSP_CODE': '6006', 'RSP_DESC': '图形验证码未输入或缺失参数！', 'DATA': {'isNeedVerfyCode': 1}}}
+2025-03-11 13:28:57 - INFO - 天翼云盘注册失败
+2025-03-11 13:29:07 - INFO - ----雪球13520028701----：{'success': True}
+2025-03-11 13:29:15 - INFO - ----巨量13520028701---- ：{'description': '', 'error_code': 0, 'mobile_ticket': 'mobile_ticket_57CCS9XH4U4DXMFWZ2GTMWRMRZ2ECMRS'}
+2025-03-11 13:29:16 - INFO - All PNG images deleted.
