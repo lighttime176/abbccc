@@ -5687,12 +5687,13 @@ def read_local_log(file_path):
     except FileNotFoundError:
         return ""
 
-# 写入新的日志文件内容
 def prepend_log(file_path, new_content):
     existing_content = read_local_log(file_path)
     combined_content = new_content + "\n" + existing_content if existing_content else new_content
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(combined_content)
+    return combined_content  # 确保返回更新后的日志内容
+
     
 if __name__ == '__main__':
     logger = setup_logger()
