@@ -34,23 +34,16 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: 运行 Python 代码
-      run: python py/5968.py
+      run: python py/8701.py
       env:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
 
-    - name: 提交更改
+    - name: 提交日志文件
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add 8701.log
+        git fetch origin main  # 获取最新远程代码
+        git reset --soft origin/main  # 保持本地修改，并与远程同步
+        git add 8701.log  # 仅添加日志文件
         git diff --cached --quiet || git commit -m "Updated logs from GitHub Actions"
-
-    - name: 解决冲突并推送更改
-      run: |
-        git fetch origin main
-        git reset --soft origin/main  # 软重置到远程最新状态，保留本地改动
-        git add 8701.log
-        git commit --amend --no-edit  # 合并到上次提交，避免新建提交
-        git push origin main --force  # 强制推送
+        git push origin main
 
