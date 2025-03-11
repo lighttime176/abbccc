@@ -1,0 +1,140 @@
+2025-03-11 13:00:12 - INFO - ----翼虎13402843958----：{'error': 30008, 'msg': '服务器开小差，请稍后再试', 'data': None}
+2025-03-11 13:00:30 - INFO - ----考拉13402843958----：{'content': {'data': {'resultCode': 100, 'smsToken': 'idc_1F95C6D84C9FC470684366BFEC0F43495', 'processFinished': True}, 'status': 0, 'success': True}, 'hasError': False}
+2025-03-11 13:00:51 - INFO - 执行 c7 失败: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=#app > div > div > div.mainBox.greenBgColor > div:nth-child(2) > div.content > form > div:nth-child(2) > div > div > span > span > span > span > span', 'index': 1, 'timeout': 10}
+Version: 4.1.0.17
+2025-03-11 13:00:57 - INFO - ----3C云13402843958----：{'status': 400, 'msg': 'CODE_SEND_FAIL'}
+2025-03-11 13:01:16 - INFO - ----交大云13402843958----：134****3958
+2025-03-11 13:01:24 - INFO - ----八法云----：{'code': 0, 'message': 'OK', 'data': {'code': 3}}
+2025-03-11 13:02:13 - INFO - ----有言13402843958----：{'error_code': 1, 'error_reason': '触发号码天级流控Permits:40'}
+2025-03-11 13:02:30 - INFO - ----环球医疗13402843958----：jsonp1741669337614({"code":"210","msg":"发送失败，请过一会再发送"})
+2025-03-11 13:02:57 - INFO - ----最有料13402843958----：{'code': 200, 'status': False, 'message': '触发号码天级流控Permits:40', 'url': None, 'other': None}
+2025-03-11 13:03:09 - INFO - ----乒协13402843958----：{'code': 10003, 'message': 'error-code.10003:触发号码天级流控Permits:40', 'tips': 'error-code.10003:触发号码天级流控Permits:40', 'result': None, 'traceId': 'b46fadd6-3748-4900-aedf-3ee26ac7846f', 'success': False}
+2025-03-11 13:03:41 - INFO - 执行 a8 失败: 
+The browser connection fails.
+Address: 127.0.0.1:59035
+Tip: 
+1, the user folder does not conflict with the open browser 
+2, if no interface system, please add '--headless=new' startup parameter 
+3, if the system is Linux, try adding '--no-sandbox' boot parameter 
+The port and user folder paths can be set using ChromiumOptions.
+Version: 4.1.0.17
+2025-03-11 13:03:46 - INFO - ----广州心理协会13402843958----：{'status': 1, 'time': '10', 'msg': '手机验证码发送成功！'}
+2025-03-11 13:03:55 - INFO - ----返利网13402843958---- ：jQuery18305657828986065823_1741669430271({"info":"succes","data":"13402843958","status":1})
+2025-03-11 13:04:04 - INFO - ----丽芙家居13402843958----：{'Result': True, 'Status': 1, 'Message': '手机验证码已发送至尾号3958手机，请注意查收', 'InnerData': {'retCode': 1, 'rm': 1}, 'CK': []}
+2025-03-11 13:04:08 - INFO - ----穷游网13402843958----：{'error_code': 0, 'result': 'ok', 'data': {'mobile': '86-13402843958'}}
+2025-03-11 13:04:19 - INFO - ----海尔13402843958----：{'result': 'SUCCESS', 'resultCode': '0', 'resultMsg': 'success', 'data': 'SUCCESS'}
+2025-03-11 13:04:19 - INFO - success
+2025-03-11 13:04:34 - INFO - ----百卓13402843958----：{'retCode': '0'}
+2025-03-11 13:04:40 - INFO - 执行 h8 失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+2025-03-11 13:04:51 - INFO - ----todesk13402843958----：{'statusCode': 200, 'data': {'challengeToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEzNDAyODQzOTU4IiwidXNhZ2UiOjEsIm5vdW5jZSI6IjEiLCJpYXQiOjE3NDE2Njk0OTEsImV4cCI6MTc0MTY2OTc5MX0.61XfKxbu-JjibqpJHgbAmly5sFxIVq22udhscbANQxY'}}
+2025-03-11 13:05:01 - INFO - ----zol13402843958----：{'info': 'error', 'msg': '图形验证码错误'}
+2025-03-11 13:05:04 - INFO - ----zol13402843958----：{'info': 'error', 'msg': '图形验证码错误'}
+2025-03-11 13:05:07 - INFO - ----zol13402843958----：{'info': 'error', 'msg': '图形验证码错误'}
+2025-03-11 13:05:10 - INFO - ----zol13402843958----：{'info': 'error', 'msg': '图形验证码错误'}
+2025-03-11 13:05:13 - INFO - ----zol13402843958----：{'info': 'ok', 'msg': '动态密码发送成功'}
+2025-03-11 13:05:24 - INFO - ----第一会展13402843958----：{"states":"err","message":"{"Message":"触发号码天级流控Permits:40","RequestId":"ABB420CE-E084-5606-A80D-B559BFBED135","Code":"isv.BUSINESS_LIMIT_CONTROL"}"}
+2025-03-11 13:05:25 - INFO - 执行 a9 失败: string indices must be integers, not 'str'
+2025-03-11 13:05:38 - INFO - ----索尼中国13402843958----：{'resultData': {'registerToken': 'Yag7Il9/Yki3FUKG8neWMyybHa6A7ugg+xpIv7wG2Sw='}, 'resultMsg': [{'code': '00', 'message': '成功'}]}
+2025-03-11 13:05:45 - INFO - ----爱乐奇13402843958----：suss
+2025-03-11 13:05:51 - INFO - ----花生同13402843958----：{'success': False, 'code': '10201', 'lang': None, 'error': '图片验证码不正确或已过期', 'errorHK': '圖片驗證碼不正確或已過期', 'data': None}
+2025-03-11 13:05:54 - INFO - ----花生同13402843958----：{'success': True, 'code': '00000', 'lang': None, 'error': None, 'errorHK': None, 'data': None}
+2025-03-11 13:06:13 - INFO - ----包图13402843958----：{'status': 1, 'msg': '亲，验证码发送成功'}
+2025-03-11 13:06:23 - INFO - ----莫言ai13402843958----：{'code': 200, 'msg': '成功', 'data': []}
+2025-03-11 13:06:42 - INFO - ----慕客13402843958----：{'code': 0, 'message': '成功', 'payload': {'captchaVerifyResult': False}}
+2025-03-11 13:06:58 - INFO - ----广告狂人13402843958----：{'msg': '操作成功', 'code': '10000'}
+2025-03-11 13:07:14 - INFO - ----feemoo13402843958----：{'status': '90001', 'msg': '', 'time': 1741669628, 'data': {'url': 'https://fmph5.jingfile.com/h5_hk', 'width': '290', 'height': '256', 'code': '', 'e': {'code': 200, 'errorCode': 90001, 'msg': '', 'params': {'url': 'https://fmph5.jingfile.com/h5_hk', 'width': '290', 'height': '256', 'code': ''}}}}
+2025-03-11 13:07:28 - INFO - ----spai13402843958----：{'error': 2005, 'msg': '操作失败,请稍后重试', 'data': None, 'total': 0}
+2025-03-11 13:07:41 - INFO - 执行 a10 失败: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=#txtMobile', 'index': 1, 'timeout': 10}
+Version: 4.1.0.17
+2025-03-11 13:07:49 - INFO - ----云群13402843958----：{'status': 200, 'msg': 'CODE_SEND_SUCCESS'}
+2025-03-11 13:07:59 - INFO - ----云码13402843958----：<pre>string(43) "{"msg":"发送成功","code":200,"data":[]}"
+</pre>
+2025-03-11 13:08:09 - INFO - ----创配----：{"states":"err","message":"{"Message":"触发号码天级流控Permits:40","RequestId":"D46DCDA8-40D3-54CD-8E43-6DFECC43438B","Code":"isv.BUSINESS_LIMIT_CONTROL"}"}
+2025-03-11 13:08:09 - INFO - 执行 d10 失败: string indices must be integers, not 'str'
+2025-03-11 13:08:25 - INFO - ----及时设计----：{'code': 801101, 'msg': 'aliyun authenticate not pass', 'msg_cn': '无痕验证未通过', 'key': 'NO_TRACE_VERIFICATION_FAILED', 'data': '400'}
+2025-03-11 13:08:48 - INFO - ----嘉立创13402843958----：{'success': True, 'code': 200}
+2025-03-11 13:09:10 - INFO - ----电子发烧友13402843958----：{'status': 'successed', 'error_code': 0, 'data': {'account': '13402843958'}}
+2025-03-11 13:09:23 - INFO - ----鸟哥笔记----：{'return_code': '200', 'return_msg': '已发送', 'return_data': []}
+2025-03-11 13:09:39 - INFO - ----团结13402843958----：{'success': True, 'data': '134028439581741669777', 'message': None, 'ErrorCode': 0}
+2025-03-11 13:09:52 - INFO - ----站库13402843958----：{'result': True}
+2025-03-11 13:09:57 - INFO - ----万兴科技13402843958----：{'code': 0, 'msg': '', 'data': ''}
+2025-03-11 13:10:17 - INFO - ----亿图13402843958----：{'status': 'success', 'msg': '', 'data': {}}
+2025-03-11 13:10:37 - INFO - 医疗器械注册失败
+2025-03-11 13:10:54 - INFO - ----大学生在线13402843958----：{'code': 200, 'message': '发送成功'}
+2025-03-11 13:11:03 - INFO - ----永洪13402843958----：{'code': 200, 'data': 'smssuccess'}
+2025-03-11 13:11:09 - INFO - ----深信服13402843958----：{'code': 0, 'msg': 'success', 'rows': 'success'}
+2025-03-11 13:11:21 - INFO - ----磨刀13402843958----：{'success': '验证码发送成功'}
+2025-03-11 13:11:28 - INFO - ----逗逗游戏伙伴13402843958----：{'code': 0, 'error_code': 0, 'error_message': '', 'payload': {}}
+2025-03-11 13:11:34 - INFO - ----阶跃ai13402843958----：{}
+2025-03-11 13:11:46 - INFO - ----韩红13402843958----：{'code': 0, 'msg': 'success', 'data': 60}
+2025-03-11 13:12:06 - INFO - ----ccf13402843958----：1
+2025-03-11 13:12:21 - INFO - ----钻石网13402843958----：{'code': 200, 'msg': '验证成功'}
+2025-03-11 13:12:32 - INFO - ----云书网13402843958----：{'code': '0', 'gitVersion': {'git.branch': 'origin/online', 'git.commit.id': '9493803b7f97740d60bed02d3a23f781f35c4156'}, 'message': '短信发送成功', 'trace': '1a82f6d7a8ec94b5'}
+2025-03-11 13:12:40 - INFO - ----天天13402843958----：{'msg': '触发号码天级流控Permits:40', 'error': 1}
+2025-03-11 13:12:40 - INFO - 执行 d12 失败: 'code'
+2025-03-11 13:12:54 - INFO - 执行 e12 失败: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=#sendChkCode', 'index': 1, 'timeout': 10}
+Version: 4.1.0.17
+2025-03-11 13:13:03 - INFO - ----拔草13402843958----：{'error': 2, 'msg': '验证码错误', 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:07 - INFO - ----拔草13402843958----：{'error': 1, 'msg': '触发号码天级流控Permits:40', 'err_code': 15, 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:11 - INFO - ----拔草13402843958----：{'error': 2, 'msg': '验证码错误', 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:15 - INFO - ----拔草13402843958----：{'error': 1, 'msg': '触发号码天级流控Permits:40', 'err_code': 15, 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:18 - INFO - ----拔草13402843958----：{'error': 2, 'msg': '验证码错误', 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:22 - INFO - ----拔草13402843958----：{'error': 2, 'msg': '验证码错误', 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:26 - INFO - ----拔草13402843958----：{'error': 2, 'msg': '验证码错误', 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:30 - INFO - ----拔草13402843958----：{'error': 2, 'msg': '验证码错误', 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:34 - INFO - ----拔草13402843958----：{'error': 1, 'msg': '触发号码天级流控Permits:40', 'err_code': 15, 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:38 - INFO - ----拔草13402843958----：{'error': 2, 'msg': '验证码错误', 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:42 - INFO - ----拔草13402843958----：{'error': 2, 'msg': '验证码错误', 'referer': '', 'state': 'fail'}
+2025-03-11 13:13:42 - INFO - 拔草5次错误
+2025-03-11 13:13:59 - INFO - 执行 g12 失败: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=body > header > div > div.cloud-header-default > div.cloud-right-wrapper > div.login-wrapper > ul > li.nav-register > a', 'index': 1, 'timeout': 10}
+Version: 4.1.0.17
+2025-03-11 13:14:16 - INFO - 紫衣注册失败
+2025-03-11 13:14:29 - INFO - 紫衣注册失败
+2025-03-11 13:14:42 - INFO - 紫衣注册失败
+2025-03-11 13:14:56 - INFO - 紫衣注册失败
+2025-03-11 13:15:09 - INFO - 紫衣注册失败
+2025-03-11 13:15:23 - INFO - 紫衣注册失败
+2025-03-11 13:15:23 - INFO - 紫衣5次错误
+2025-03-11 13:15:52 - INFO - 执行 i12 失败: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=body > div:nth-child(1) > div > div:nth-child(3) > p > span:nth-child(1)', 'index': 1, 'timeout': 10}
+Version: 4.1.0.17
+2025-03-11 13:16:03 - INFO - ----飞乐13402843958----：{'status': -1, 'msg': 'CODE_RES_ERROR'}
+2025-03-11 13:16:16 - INFO - 飞乐注册失败
+2025-03-11 13:16:16 - INFO - 执行 j12 失败: 'status'
+2025-03-11 13:16:20 - INFO - ----58同城13402843958----：JsonpCallBack1741670180409131({"code":0,"data":{"voice":true,"exist":0,"requesthost":"passport.58.com","times":"30","tokencode":"RCCy8di_xvfkFkGsJZ9rbKz97kQIlJlf","length":6,"action":"0","strategyid":"2","label":"收不到短信验证码？","type":2},"msg":"动态码已发送"})
+2025-03-11 13:16:33 - INFO - ----中图网13402843958----：{'Status': 0, 'Msg': None, 'Succeed': True, 'Data': None, 'Remark': None, 'Error': None}
+2025-03-11 13:16:42 - INFO - ----优购13402843958----：2
+2025-03-11 13:16:48 - INFO - ----多多买菜13402843958----：{'success': True, 'errorCode': 1000000, 'errorMsg': None, 'result': None}
+2025-03-11 13:17:01 - INFO - 执行 e13 失败: 
+This element has no location or size.
+Version: 4.1.0.17
+2025-03-11 13:17:06 - INFO - ----酒窝13402843958----：
+2025-03-11 13:17:20 - INFO - ----安徽博物院13402843958----：{'success': False, 'message': '验证码发送失败'}
+2025-03-11 13:17:26 - INFO - ----爱卡13402843958----：{'stat': '-1', 'error': '验证码发送失败!', 'a': 'mpincode'}
+2025-03-11 13:17:34 - INFO - ----花礼网13402843958----：{'Status': '0', 'ErrMsg': None, 'DataStatus': 0, 'Datas': {'Message': '验证码已经发送到13402843958,请及时输入进行验证。'}, 'HuaSessionId': None}
+2025-03-11 13:17:48 - INFO - ----美非遗13402843958----：{'code': '200', 'codeid': 5837, 'msg': 'success'}
+2025-03-11 13:17:49 - INFO - Deleted: .\a19c2e41f.png
+2025-03-11 13:17:49 - INFO - Deleted: .\bd_background.png
+2025-03-11 13:17:49 - INFO - Deleted: .\cp.png
+2025-03-11 13:17:49 - INFO - Deleted: .\guhai_background.png
+2025-03-11 13:17:49 - INFO - Deleted: .\hzzx.png
+2025-03-11 13:17:49 - INFO - Deleted: .\ngbj.png
+2025-03-11 13:17:49 - INFO - Deleted: .\tt.png
+2025-03-11 13:17:49 - INFO - Deleted: .\xl.png
+2025-03-11 13:17:49 - INFO - Deleted: .\ysw.png
+2025-03-11 13:17:49 - INFO - All PNG images deleted.
