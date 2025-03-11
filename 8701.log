@@ -195,3 +195,15 @@ Version: 4.1.0.17
 2025-03-10 20:17:21 - INFO - Deleted: .\ngbj.png
 2025-03-10 20:17:21 - INFO - Deleted: .\tt.png
 2025-03-10 20:17:21 - INFO - All PNG images deleted.
+2025-03-11 13:00:18 - INFO - ----阿里云13520028701----：{'success': True}
+2025-03-11 13:00:36 - INFO - ----百度13520028701----：bd__cbs__lxaafw({"errno":18,"msg":"\u8bf7\u586b\u5199\u9a8c\u8bc1\u7801","vcodestr":"njPa01b3ea62b6c22fc0259180cac01f109a30c7d867301f0cd","vcodesign":"ea681bc773","isslide":null})
+2025-03-11 13:00:42 - INFO - ----凤凰网13520028701----：{'code': 'CaptchaRequired', 'msg': 'code: CaptchaRequired, msg: 需要验证码', 'tips': '需要验证码'}
+2025-03-11 13:01:06 - INFO - ----联通云盘13520028701----：{'STATUS': '200', 'MSG': '服务调用成功！', 'LOGID': None, 'RSP': {'RSP_CODE': '0000', 'RSP_DESC': '成功', 'DATA': None}}
+2025-03-11 13:01:21 - INFO - ----天翼云盘13520028701----：{'result': 0, 'msg': 'success'}
+2025-03-11 13:01:31 - INFO - ----雪球13520028701----：{'success': True}
+2025-03-11 13:01:47 - INFO - 执行 juliang 失败: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=#account-sdk > section > div.account-center-sdk-form > div:nth-child(1) > div > div > span > input', 'index': 1, 'timeout': 10}
+Version: 4.1.0.17
+2025-03-11 13:01:47 - INFO - All PNG images deleted.
