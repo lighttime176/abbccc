@@ -38,16 +38,27 @@ jobs:
       env:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
-    - name: 提交日志文件
+    - name: Upload app.log to Gist
+      env:
+        GH_TOKEN: ${{ secrets.GIST_TOKEN }}
+      shell: pwsh
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-    
-        git fetch origin main  # 获取最新远程代码
-        git reset --soft origin/main  # 确保本地和远程一致，但保留修改
-        git add 5968.log  # 仅添加日志文件
-        git diff --cached --quiet || git commit -m "Updated logs from GitHub Actions"
-    
-        git pull --rebase origin main  # 先拉取最新代码，避免冲突
-        git push origin main
+        # 设置 Gist ID
+        $GIST_ID = "20d6a1045ee6144d9002447ce3761c13"
 
+        # 检查 gh 命令是否可用
+        if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
+          Write-Host "GitHub CLI (gh) 未安装，尝试安装..."
+          Invoke-WebRequest -Uri "https://github.com/cli/cli/releases/latest/download/gh_2.44.0_windows_amd64.msi" -OutFile "gh.msi"
+          Start-Process -Wait -FilePath "msiexec" -ArgumentList "/i gh.msi /quiet /norestart"
+          Remove-Item "gh.msi"
+        }
+
+        # 配置 GitHub CLI 认证
+        echo $env:GH_TOKEN | gh auth login --with-token
+
+        # 确保 gh 认证成功
+        gh auth status
+
+        # 追加日志内容到 Gist
+        gh gist edit $GIST_ID --add app.log || gh gist create app.log --public
