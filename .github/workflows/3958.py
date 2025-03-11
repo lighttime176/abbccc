@@ -1,0 +1,48 @@
+# 该 workflow 将安装 Python 依赖，运行代码，并提交更新到 GitHub
+
+name: 3958
+
+on:
+  #schedule:
+    # 设置为 UTC 时间，UTC23点对应北京时间7点
+    #- cron: '00 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+
+    - name: 设置 Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'  # 启用 pip 缓存，加速安装
+
+    - name: 安装依赖
+      run: pip install -r requirements.txt
+
+    - name: 运行 Python 代码
+      run: python py/3958.py
+      env:
+        APP_ID: ${{ secrets.APP_ID }}
+        ydyp: ${{ secrets.ydyp }}
+
+    - name: 提交日志文件
+      run: |
+        git fetch origin main  # 获取最新远程代码
+        git reset --soft origin/main  # 保持本地修改，并与远程同步
+        git add 3958.log  # 仅添加日志文件
+        git diff --cached --quiet || git commit -m "Updated logs from GitHub Actions"
+        git push origin main
