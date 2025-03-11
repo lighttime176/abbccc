@@ -412,3 +412,40 @@ Version: 4.1.0.17
 2025-03-11 10:24:55 - INFO - Deleted: .\ngbj.png
 2025-03-11 10:24:55 - INFO - Deleted: .\tt.png
 2025-03-11 10:24:55 - INFO - All PNG images deleted.
+2025-03-11 13:13:28 - INFO - ----阿里云13007665968----：{'success': True}
+2025-03-11 13:13:44 - INFO - ----百度13007665968----：bd__cbs__oaf7wr({"errno":18,"msg":"\u8bf7\u586b\u5199\u9a8c\u8bc1\u7801","vcodestr":"tcP1238eda72bd5085a024d185c5a01a87d82df833b280120d7","vcodesign":"4ab550e880","isslide":null})
+2025-03-11 13:13:50 - INFO - ----凤凰网13007665968----：{'code': 'CaptchaRequired', 'msg': 'code: CaptchaRequired, msg: 需要验证码', 'tips': '需要验证码'}
+2025-03-11 13:14:10 - INFO - ----联通云盘13007665968----：{'STATUS': '200', 'MSG': '服务调用成功！', 'LOGID': None, 'RSP': {'RSP_CODE': '6006', 'RSP_DESC': '图形验证码未输入或缺失参数！', 'DATA': {'isNeedVerfyCode': 1}}}
+2025-03-11 13:14:32 - INFO - 天翼云盘注册失败
+2025-03-11 13:14:42 - INFO - ----雪球13007665968----：{'success': True}
+2025-03-11 13:14:49 - INFO - ----巨量13007665968---- ：{'description': '', 'error_code': 0, 'mobile_ticket': 'mobile_ticket_MM9RMVPRP9H68DDEDJQUAATHZHRHHVPU'}
+2025-03-11 13:14:56 - INFO - ----兔喜13007665968---- ：{'result': {'isRisk': 1}, 'message': '请先进行验证', 'status': True, 'statusCode': 'risk_control_invalid_captcha'}
+2025-03-11 13:15:05 - INFO - ----水滴筹13007665968---- ：{'code': 71211, 'msg': '开启图形校验', 'data': None}
+2025-03-11 13:15:21 - INFO - ----小红书13007665968----：{'success': True, 'msg': '成功', 'data': {}, 'code': 0}
+2025-03-11 13:15:37 - INFO - 执行 doubao 失败: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=#root > div.flow-web-root-outlet > div > div.containerWrapper-zs8cOO > div.panelWrapper-w47RMk > div.center-full-DCvpXt > div > div > div.header-QmdZVu > div > div > div > div.right-ANm42w > div > button > span', 'index': 1, 'timeout': 10}
+Version: 4.1.0.17
+2025-03-11 13:15:42 - INFO - ----KYE13007665968---- ：{'code': 264587, 'msg': '错误次数太多，请稍后重试', 'data': {'ruleId': 27, 'type': 4, 'strategyCode': 'passwordSmsLogin', 'msg': None, 'priority': 3}, 'traceId': None, 'success': False}
+2025-03-11 13:15:50 - INFO - ----易车13007665968----：0s后重新发送
+2025-03-11 13:16:07 - INFO - ----移动云盘13007665968---- ：{'success': True, 'code': '0', 'message': 'OK', 'data': {'result': {'resultCode': '0', 'resultDesc': '请求成功'}, 'mode': '0', 'regFlag': None, 'remainGetTimes': 1, 'verifyCode': None, 'objNumber': None, 'random': 'l1rwbQW0'}}
+2025-03-11 13:16:19 - INFO - ----南方泵业13007665968----：{'Data': None, 'Code': -4, 'Message': '手机号已调用多次'}
+2025-03-11 13:16:26 - INFO - ----秘塔13007665968----：{'code': 2701, 'msg': '手机号不存在,请先注册!'}
+2025-03-11 13:16:34 - INFO - ----孔子学院13007665968----：{'msg': '操作成功', 'code': 200}
+2025-03-11 13:16:42 - INFO - ----巨人网络13007665968---- ：{'success': True, 'msg': '', 'data': []}
+2025-03-11 13:16:50 - INFO - ----火山引擎13007665968---- ：{'ResponseMetadata': {'RequestId': '20250311131649D993C8D5578B45BF0F31'}}
+2025-03-11 13:16:58 - INFO - ----webcsdn学院13007665968----：{'code': '1005', 'message': '短信发送失败', 'status': False}
+2025-03-11 13:17:05 - INFO - ----233乐园13007665968----：验证码倒计时发送验证码s
+2025-03-11 13:17:15 - INFO - ----q医疗13007665968----：{'data': {'code': '400'}, 'count': 0}
+2025-03-11 13:17:23 - INFO - ----指南者13007665968----：{'code': 0, 'msg': '发送验证码过于频繁，请稍后重试！'}
+2025-03-11 13:17:35 - INFO - ----闪德13007665968----：{'code': 0, 'msg': '短信服务异常', 'data': 4, 'url': '', 'wait': 3}
+2025-03-11 13:17:40 - INFO - ----顺丰同城13007665968----：{'errno': 3001, 'errmsg': '请输入图片验证码', 'errmsg_lang': {'zh': '请输入图片验证码', 'en': 'Please enter the image verification code.'}, 'data': None, 'lid': '597893213452367969'}
+2025-03-11 13:17:48 - INFO - ----指南者13007665968----：{'code': 0, 'msg': '发送验证码过于频繁，请稍后重试！'}
+2025-03-11 13:18:01 - INFO - ----云8813007665968----：{'code': 1, 'msg': '触发号码天级流控Permits:40'}
+2025-03-11 13:18:20 - INFO - 执行 wjs 失败: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=#dsbLogin1 > div:nth-child(4) > div', 'index': 1, 'timeout': 10}
+Version: 4.1.0.17
+2025-03-11 13:18:20 - INFO - All PNG images deleted.
