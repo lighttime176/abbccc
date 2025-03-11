@@ -39,40 +39,30 @@ jobs:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
 
-    - name: 追加日志到 Gist
-      uses: actions/github-script@v7
+    - name: Upload app.log to Gist
       env:
-        GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-        GIST_ID: ${{ secrets.GIST_ID }}
-      with:
-        github-token: ${{ secrets.GIST_TOKEN }}
-        script: |
-          const fs = require('fs');
+        GH_TOKEN: ${{ secrets.GIST_TOKEN }}
+      shell: pwsh
+      run: |
+        # 设置 Gist ID
+        $GIST_ID = "20d6a1045ee6144d9002447ce3761c13"
 
-          // 获取当前 Gist 内容
-          const gistResponse = await github.request("GET /gists/${process.env.GIST_ID}", {
-            headers: { authorization: `token ${process.env.GIST_TOKEN}` }
-          });
+        # 检查 gh 命令是否可用
+        if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
+          Write-Host "GitHub CLI (gh) 未安装，尝试安装..."
+          Invoke-WebRequest -Uri "https://github.com/cli/cli/releases/latest/download/gh_2.44.0_windows_amd64.msi" -OutFile "gh.msi"
+          Start-Process -Wait -FilePath "msiexec" -ArgumentList "/i gh.msi /quiet /norestart"
+          Remove-Item "gh.msi"
+        }
 
-          let oldContent = gistResponse.data.files["8701.log"]?.content || "";
-          let newContent = fs.readFileSync('8701.log', 'utf8');
+        # 配置 GitHub CLI 认证
+        echo $env:GH_TOKEN | gh auth login --with-token
 
-          // 追加新日志
-          let updatedContent = oldContent + "\n" + newContent;
+        # 确保 gh 认证成功
+        gh auth status
 
-          // 更新 Gist
-          await github.request("PATCH /gists/${process.env.GIST_ID}", {
-            headers: {
-              authorization: `token ${process.env.GIST_TOKEN}`
-            },
-            files: {
-              "2888.log": {
-                content: updatedContent
-              }
-            }
-          });
-
-          console.log("Gist 追加更新成功: https://gist.github.com/${process.env.GIST_ID}");
+        # 追加日志内容到 Gist
+        gh gist edit $GIST_ID --add app.log || gh gist create app.log --public
 
 
 
