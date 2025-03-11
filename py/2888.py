@@ -5828,6 +5828,14 @@ if __name__ == '__main__':
     # safe_execute(i13)
     # safe_execute(j13)
     clear()
+    # 下载 Gist 内容并打印
     gist_content = download_gist(GIST_URL)
-    prepend_log(LOCAL_LOG_FILE, gist_content)
+    print("\nGist 下载的日志内容:")
+    print(gist_content)
+    
+    # 更新日志文件并打印新内容
+    updated_log_content = prepend_log(LOCAL_LOG_FILE, gist_content)
+    print("\n更新后的日志文件内容:")
+    print(updated_log_content)
+    
     print("日志文件已更新！")
