@@ -13,7 +13,7 @@ from datetime import datetime
 # masked_phone = phonenum[:3] + '****' + phonenum[-4:]
 phonenum = '13402843958'
 masked_phone = phonenum
-log_filename = "3958.log"
+log_filename = "app.log"
 
 def aliyun(tab, browser):
     
