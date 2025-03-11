@@ -54,8 +54,8 @@ jobs:
             headers: { authorization: `token ${process.env.GIST_TOKEN}` }
           });
 
-          let oldContent = gistResponse.data.files["2888.log"]?.content || "";
-          let newContent = fs.readFileSync('2888.log', 'utf8');
+          let oldContent = gistResponse.data.files["8701.log"]?.content || "";
+          let newContent = fs.readFileSync('8701.log', 'utf8');
 
           // 追加新日志
           let updatedContent = oldContent + "\n" + newContent;
