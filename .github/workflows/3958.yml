@@ -41,8 +41,12 @@ jobs:
 
     - name: 提交日志文件
       run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
         git fetch origin main  # 获取最新远程代码
         git reset --soft origin/main  # 保持本地修改，并与远程同步
         git add 3958.log  # 仅添加日志文件
         git diff --cached --quiet || git commit -m "Updated logs from GitHub Actions"
         git push origin main
+
