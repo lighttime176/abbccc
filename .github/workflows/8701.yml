@@ -39,15 +39,17 @@ jobs:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
 
-    - name: 提交日志文件
+    - name: commit files
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        
-        git fetch origin main  # 获取最新远程代码
-        git reset --soft origin/main  # 保持本地修改，并与远程同步
-        git add 8701.log  # 仅添加日志文件
-        git diff --cached --quiet || git commit -m "Updated logs from GitHub Actions"
-        git push origin main
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add 8701.log
+          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+          
+    - name: push changes
+      uses: ad-m/github-push-action@v0.8.0
+      with:
+          github_token: ${{ secrets.TOKEN }}
+          branch: main 
 
 
