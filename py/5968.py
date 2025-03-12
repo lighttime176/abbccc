@@ -12,11 +12,11 @@ from datetime import datetime
 # phonenum = os.environ.get("ydyp")
 # masked_phone = phonenum[:3] + '****' + phonenum[-4:]
 # Gist 原始文件 URL
-GIST_URL = "https://gist.githubusercontent.com/lighttime176/8c368150dbf24664712675a007861ec4/raw/app.log"
-LOCAL_LOG_FILE = "app.log"
+GIST_URL = "https://gist.githubusercontent.com/lighttime176/956db21cc48b3532187b6b542068f632/raw/5968.log"
+LOCAL_LOG_FILE = "5968.log"
 phonenum = '13007665968'
 masked_phone = phonenum
-log_filename = "app.log"
+log_filename = "5968.log"
 
 def aliyun(tab, browser):
     
