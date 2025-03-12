@@ -716,7 +716,7 @@ def b4(tab,browser):
     try:
         res = tab.listen.wait(timeout=10).response
         res = res.body
-        logger.info(f'----AI好记----：{res}')
+        logger.info(f'----AI好记{masked_phone}----：{res}')
     except:
         logger.info('AI好记注册失败')
         res = {"statusCode": -1}
@@ -1155,7 +1155,7 @@ def j5(tab, browser):
     try:
         res = tab.listen.wait(timeout=10).response
         res = res.body
-        logger.info(f'----问小白----：{res}')
+        logger.info(f'----问小白{masked_phone}----：{res}')
     except:
         logger.info('问小白注册失败')
         res = {"statusCode": -1}
@@ -1556,7 +1556,7 @@ def f7(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      logger.info(f'----八法云----：{res}')
+      logger.info(f'----八法云{masked_phone}----：{res}')
   except:
       logger.info('八法云注册失败')
       res = {"statusCode": -1}
@@ -3818,7 +3818,7 @@ def e10(tab, browser):
     try:
         res = tab.listen.wait(timeout=10).response
         res = res.body
-        logger.info(f'----及时设计----：{res}')
+        logger.info(f'----及时设计{masked_phone}----：{res}')
     except:
         logger.info('及时设计注册失败')
         res = {'msg': '-1'}
@@ -4045,7 +4045,7 @@ def h10(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      logger.info(f'----鸟哥笔记----：{res}')
+      logger.info(f'----鸟哥笔记{masked_phone}----：{res}')
   except:
       logger.info('鸟哥笔记注册失败')
       res = {"return_code": '-1'}
@@ -4062,7 +4062,7 @@ def h10(tab, browser):
       try:
           res = tab.listen.wait(timeout=10).response
           res = res.body
-          logger.info(f'----鸟哥笔记----：{res}')
+          logger.info(f'----鸟哥笔记{masked_phone}----：{res}')
       except:
           logger.info('鸟哥笔记注册失败')
           res = {"return_code": '-1'}
