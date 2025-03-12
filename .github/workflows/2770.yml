@@ -34,7 +34,7 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: 运行 Python 代码
-      run: python py/2888.py
+      run: python py/2770.py
       env:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
