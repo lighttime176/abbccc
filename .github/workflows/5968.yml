@@ -39,13 +39,13 @@ jobs:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
 
-    - name: Upload app.log to Gist
+    - name: Upload 5968.log to Gist
       env:
         GH_TOKEN: ${{ secrets.GIST_TOKEN }}
       shell: pwsh
       run: |
         # 设置 Gist ID
-        $GIST_ID = "8c368150dbf24664712675a007861ec4"
+        $GIST_ID = "956db21cc48b3532187b6b542068f632"
 
         # 检查 gh 命令是否可用
         if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
@@ -62,5 +62,5 @@ jobs:
         gh auth status
 
         # 追加日志内容到 Gist
-        gh gist edit $GIST_ID --add app.log || gh gist create app.log --public
+        gh gist edit $GIST_ID --add 5968.log || gh gist create 5968.log --public
 
