@@ -13,10 +13,12 @@ from datetime import datetime
 # masked_phone = phonenum[:3] + '****' + phonenum[-4:]
 # Gist 原始文件 URL
 
-LOCAL_LOG_FILE = "9933.log"
+
 phonenum = '13329989933'
 gistid = '9111f27c34cdc932f91b92c85ed0f118'
 
+
+LOCAL_LOG_FILE = f"{phonenum[-4:]}.log"
 GIST_URL = f"https://gist.githubusercontent.com/lighttime176/{gistid}/raw/{LOCAL_LOG_FILE}"
 masked_phone = phonenum
 log_filename = LOCAL_LOG_FILE
