@@ -12,7 +12,7 @@ from datetime import datetime
 # phonenum = os.environ.get("ydyp")
 # masked_phone = phonenum[:3] + '****' + phonenum[-4:]
 # Gist 原始文件 URL
-GIST_URL = "https://gist.githubusercontent.com/lighttime176/33c197f147227e64af26752499a4c19e/raw/2996.log"
+GIST_URL = "https://gist.githubusercontent.com/lighttime176/f7b7d2443e9003ffef637aeca2cd6ca7/raw/2996.log"
 LOCAL_LOG_FILE = "2996.log"
 phonenum = '13545882996'
 masked_phone = phonenum
