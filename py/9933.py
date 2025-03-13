@@ -5602,6 +5602,275 @@ def j13(tab, browser):
       res = {"statusCode": -1}
       res = {"statusCode": -1}
   browser.quit()  # 关闭浏览器
+
+def a15(tab, browser):
+  url = 'https://ai.myprad.com/pages/login/reg'
+  phoneele = 'css=' + 'body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view.cp-flex-col.section.space-y-56.pos_2 > uni-view > uni-view.cp-flex-col.space-y-27 > uni-view.cp-flex-row.cp-items-center.section_2.space-x-19 > uni-input > div > input'
+  sendele = 'css=' + 'body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view.cp-flex-col.section.space-y-56.pos_2 > uni-view > uni-view.cp-flex-col.space-y-27 > uni-view:nth-child(2) > uni-view:nth-child(2)'
+  target = '/add'
+  name = 'ai问客'
+  
+  tab.get(url)
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+  browser.quit()  # 关闭浏览器
+
+
+def b15(tab, browser):
+  url = 'https://kimi.moonshot.cn/'
+  phoneele = 'css=' + 'body > div.login-modal-mask > div > div > div > div.phone-login > div.phone-login-mobile > input'
+  sendele = 'css=' + 'body > div.login-modal-mask > div > div > div > div.phone-login > div.phone-login-verify-code > button'
+  target = '/sms/verify-code'
+  name = 'KIMI'
+  
+  tab.get(url)
+  ele = tab.ele('css=#app > div > div > div.sidebar-placeholder.open > aside > div.sidebar-user-info > div > div > span')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  time.sleep(1)
+  ele.click()
+  # ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def c15(tab, browser):
+  url = 'https://www.ppword.cn/loginCenter.html'
+  phoneele = 'css=' + 'body > div.login-panel > div.login-content > div.login-normal > input.login-input.login-input-username'
+  sendele = 'css=' + 'body > div.login-panel > div.login-content > div.login-normal > div.sms-panel.flex-between.margin_top_24 > a'
+  target = '/sendSms'
+  name = 'ppword'
+  
+  tab.get(url)
+  ele = tab.ele('css=body > div.login-panel:nth-child(1) > div.login-content:nth-child(2) > div.login-sw.flex-between:nth-child(1) > p.login-sw-item.login-sw-normal:nth-child(2) > span.login-sw-normal-title:nth-child(1)')
+  ele.click()
+  ele = tab.ele('css=body > div > div.login-content > div.login-normal > div:nth-child(10) > a.nav.reg-btn')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def d15(tab, browser):
+  url = 'https://xmind.cn/signup/?next=https://xmind.cn/account/#phone'
+  phoneele = 'css=' + '#ssf > div > div > div > div > div > div > div > div.signup-core > div.signin-layout__tab-content > div > form > div.signin-layout__form-inputs > div > div > div.xm-uikit-input.form-input.was-validated > div > input'
+  sendele = 'css=' + '#ssf > div > div > div > div > div > div > div > div.signup-core > div.signin-layout__tab-content > div > form > div.signin-layout__form-inputs > div > div > div.xm-uikit-input.verify-code-input.was-validated > div > div > div'
+  target = 'phone='
+  name = 'xmind'
+  
+  tab.get(url)
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def e15(tab, browser):
+  url = 'https://file.yunjibang.cn/h5/login/c21k8vtxb04h8vr89an461b0azxkkhy9'
+  phoneele = 'css=' + '#van-field-1-input'
+  sendele = 'css=' + '#app > div > main > div.login-wrapper > div:nth-child(1) > div > form > div.van-cell-group.van-cell-group--inset.smscode-item > div > div > div > div > span'
+  target = '/send-sms-code'
+  name = '云机帮'
+  
+  tab.get(url)
+  ele = tab.ele('css=#app > div > main > div.login-wrapper > div:nth-child(1) > div > form > div.van-cell.van-field.agreement-item > div > div.van-field__body > div > div > div > i')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def f15(tab, browser):
+  url = 'https://www.jieqinwang.com/register/user'
+  phoneele = 'css=' + '#phonenumber'
+  sendele = 'css=' + '#sends'
+  target = 'https://www.jieqinwang.com/Common/code'
+  name = '婚车网'
+  
+  tab.get(url)
+  ele = tab.ele('css=#login_xieyi')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def g15(tab, browser):
+  url = 'https://h5.txyunos.com/#/login/index?redirect=/index'
+  phoneele = 'css=' + '#app > div > div > form > ul > li:nth-child(1) > div > input[type=text]'
+  sendele = 'css=' + '#app > div > div > form > ul > li:nth-child(3) > div > span'
+  target = '/GetCode'
+  name = '桃心云'
+  
+  tab.get(url)
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+
+  browser.quit()  # 关闭浏览器
+
+
+def h15(tab, browser):
+  url = 'https://account.zbj.com/register?fromurl=https%3A%2F%2Fwww.zbj.com%2Fdp%2F23188604%2F'
+  phoneele = 'css=' + '#phoneNumber'
+  sendele = 'css=' + '#mobilecode-btn'
+  target = '/sendregistercode'
+  name = '猪八戒'
+  
+  tab.get(url)
+  ele = tab.ele('css=#protocal')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  # print(ele)
+  # print(ele.text)
+  ele.click()
+  time.sleep(1)
+  ele.click(by_js=True)
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+  browser.quit()  # 关闭浏览器
+
+
+def i15(tab, browser):
+  url = 'https://www.baichuan-ai.com/home'
+  phoneele = 'css=' + '#headlessui-dialog-panel-\:r2\: > div.login-ctx.modal > div > div.login-body-innerblock > div.phone-box > input'
+  sendele = 'css=' + '#headlessui-dialog-panel-\:r2\: > div.login-ctx.modal > div > div.login-body-innerblock > div.captcha-box > button'
+  target = '/send'
+  name = '百川'
+  
+  tab.get(url)
+  ele = tab.ele('text=登录')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+  browser.quit()  # 关闭浏览器
+
+
+def j15(tab, browser):
+  url = 'https://www.qtfm.cn/podcasters/59c810eaedd81f8f73b45936bc533376/'
+  phoneele = 'css=' + '#register-phone'
+  sendele = 'css=' + '#app > div > div.navigator > div > div.overlay.prompt > div.account-root > div.body > div.auth_field > div.auth_btn'
+  target = 'send'
+  name = '蜻蜓'
+  
+  tab.get(url)
+  ele = tab.ele('text=登录')
+  ele.click()
+  ele = tab.ele('text=注册')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+  browser.quit()  # 关闭浏览器
 def create_browser():
     """创建一个新的浏览器实例"""
     co = ChromiumOptions().auto_port()
@@ -5833,6 +6102,16 @@ if __name__ == '__main__':
     safe_execute(h13)
     safe_execute(i13)
     safe_execute(j13)
+    safe_execute(a15)
+    safe_execute(b15)
+    safe_execute(c15)
+    safe_execute(d15)
+    safe_execute(e15)
+    safe_execute(f15)
+    safe_execute(g15)
+    safe_execute(h15)
+    safe_execute(i15)
+    safe_execute(j15)
     clear()
     # 下载 Gist 内容并打印
     gist_content = download_gist(GIST_URL)
