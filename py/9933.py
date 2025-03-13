@@ -13,7 +13,7 @@ from datetime import datetime
 # masked_phone = phonenum[:3] + '****' + phonenum[-4:]
 # Gist 原始文件 URL
 
-
+#修改手机号，修改gistid
 phonenum = '13329989933'
 gistid = '9111f27c34cdc932f91b92c85ed0f118'
 
