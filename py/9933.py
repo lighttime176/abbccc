@@ -5834,6 +5834,7 @@ def i15(tab, browser):
   ele = tab.ele(sendele)
   tab.listen.start(targets=target)
   ele.click()
+  ele.click(by_js=True)
   
   try:
       res = tab.listen.wait(timeout=10).response
@@ -5879,7 +5880,279 @@ def create_browser():
     co.set_argument('--disable-gpu')  # 禁用GPU，提高加载速度
     browser = Chromium(addr_or_opts=co)
     return browser
+
+def a16(tab, browser):
+  url = 'https://aichat.kqbusinessai.com/web'
+  phoneele = 'css=' + '#app > div > div.login-login > div > div.login-tab > div.tab-input > form > div.el-form-item.is-required > div > div > input'
+  sendele = 'css=' + '#app > div > div.login-login > div > div.login-tab > div.tab-input > form > div.el-form-item.item > div > button > span'
+  target = '/sendPhoneLoginCode'
+  name = 'businessai'
   
+  tab.get(url)
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+  browser.quit()  # 关闭浏览器
+
+
+def b16(tab, browser):
+  url = 'https://luca.cn/home'
+  phoneele = 'css=' + '#el-id-6148-3 > section > form > div:nth-child(1) > input[type=text]'
+  sendele = 'css=' + '#el-id-6148-3 > section > form > div.form-item-wrapper.flex-row > p'
+  target = '/sendSmsCode'
+  name = 'luca'
+  
+  tab.get(url)
+  ele = tab.ele('text=登录')
+  ele.click()
+  sendele = tab.ele('text=获取验证码')
+  ele = sendele.parent().prev().child()
+  
+  
+  ele.input(phonenum)
+  
+  tab.listen.start(targets=target)
+  sendele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def c16(tab, browser):
+  url = 'https://chat.minimaxi.com/'
+  phoneele = 'css=' + '#phone'
+  sendele = 'css=' + 'body > section.fixed.bottom-0.left-0.right-0.top-0.z-\[1050\].overflow-auto > div > div > div > div.login-modal-wrapper > div.flex.h-full.justify-center > div.w-\[400px\].p-8.md\:px-\[35px\].md\:py-12 > div.w-full > form > div.flex.w-full.items-center > div:nth-child(2) > button'
+  target = 'login/sms/send'
+  name = 'minimax'
+  
+  tab.get(url)
+  ele = tab.ele('text=登录')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def d16(tab, browser):
+  url = 'https://www.modelscope.cn/studios/iic/ModelScopeGPT'
+  phoneele = 'css=' + '#fm-sms-login-id'
+  sendele = 'css=' + '#login-form > div.fm-field.fm-field-sms > div.send-btn > a'
+  target = '/sms/send.do'
+  name = 'ms'
+  
+  tab.get(url)
+  ele = tab.ele('text=登录 / 注册')
+  ele.click()
+  ele = tab.ele('text=短信登录')
+  ele.click()
+  ele = tab.ele('css=#fm-agreement-checkbox')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def e16(tab, browser):
+  url = 'https://maopaoya.com/'
+  phoneele = 'css=' + '#mobile'
+  sendele = 'css=' + 'body > div:nth-child(31) > div.arco-modal-wrapper.arco-modal-wrapper-align-center > div > div:nth-child(2) > div > form > div.bg-grey-2.rounded-12px.relative.mt-5.flex.items-center.px-5.py-3 > button'
+  target = '/SendVerifyCode'
+  name = '冒泡鸭'
+  
+  tab.get(url)
+  ele = tab.ele('text=开始聊天')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele('text=获取验证码')
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def f16(tab, browser):
+  url = 'https://chat.sensetime.com/'
+  phoneele = 'css=' + '#normal_login_mobile'
+  sendele = 'css=' + '#normal_login > div:nth-child(2) > div > div > div > div > span > span.ant-input-suffix > button > span'
+  target = '/send-sms'
+  name = '商量'
+  
+  tab.get(url)
+  ele = tab.ele('text=登录/注册')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+  browser.quit()  # 关闭浏览器
+
+
+def g16(tab, browser):
+  url = 'https://ai.jijianzn.com/web/pages/register/mobile'
+  phoneele = 'css=' + 'body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(2) > uni-view > uni-view > uni-input > div > input'
+  sendele = 'css=' + 'body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(3) > uni-button > uni-text > span'
+  target = ''
+  name = '蜜汁ai'
+  
+  tab.get(url)
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  ele.click()
+  time.sleep(2)
+  try:
+      ele = tab.ele('css=body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(3) > uni-button > uni-text > span')
+      print(f'----{name}{masked_phone}----：{ele.text}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+
+
+  browser.quit()  # 关闭浏览器
+
+
+def h16(tab, browser):
+  url = 'https://tongyi.aliyun.com/xingchen/'
+  phoneele = 'css=' + '#fm-sms-login-id'
+  sendele = 'css=' + '#login-form > div.fm-field.fm-field-sms > div.send-btn > a'
+  target = '/sendSms.do'
+  name = '通义星辰'
+  
+  tab.get(url)
+  ele = tab.ele('text=登录/注册')
+  ele.click()
+  ele = tab.ele('css=#fm-agreement-checkbox')
+  ele.click()
+  ele.click(by_js=True)
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+  browser.quit()  # 关闭浏览器
+
+
+def i16(tab, browser):
+  url = 'https://ciyuan.ideaflow.pro/'
+  phoneele = 'css=' + 'body > div.login > div > div:nth-child(3) > input'
+  sendele = 'css=' + 'body > div.login > div > div:nth-child(3) > button'
+  target = '/sms?phone'
+  name = '造梦次元'
+  
+  tab.get(url)
+  ele = tab.ele('text=登录/注册')
+  ele.click()
+  ele = tab.ele('text=手机号登录')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  ele = tab.ele(sendele)
+  tab.listen.start(targets=target)
+  ele.click()
+  
+  try:
+      res = tab.listen.wait(timeout=10).response
+      res = res.body
+      print(f'----{name}{masked_phone}----：{res}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+  browser.quit()  # 关闭浏览器
+
+
+def j16(tab, browser):
+  url = 'https://ask.feishu.cn/guest'
+  phoneele = 'css=' + '#root > div > div.login-content-container > div > div > div > div > div.ud__modal__body.ud__scrollArea.ud__scrollArea-hide-bar.ud__scrollArea-y > div > div.pp-mobile-input.mobile-input-container > div > div.mobile-input-right > input'
+  sendele = 'css=' + '#root > div > div.login-content-container > div > div > div > div > div.ud__modal__body.ud__scrollArea.ud__scrollArea-hide-bar.ud__scrollArea-y > div > div.verify_input > div > div.verify_input__input-right > div'
+  target = ''
+  name = '飞书'
+  
+  tab.get(url)
+  ele = tab.ele('css=#root > div > section > main > div.header-vqBzkJ > div.headerToolbarButtons-AYHMdA > div > div > span')
+  ele.click()
+  ele = tab.ele(phoneele)
+  ele.input(phonenum)
+  sendele = tab.ele(sendele)
+  
+  sendele.click()
+  ele = tab.ele('text=同意')
+  ele.click()
+  time.sleep(3)
+  sendele = tab.ele('css=#root > div > div.login-content-container > div > div > div > div > div.ud__modal__body.ud__scrollArea.ud__scrollArea-hide-bar.ud__scrollArea-y > div > div.verify_input > div > div.verify_input__input-right > div')
+  try:
+      print(f'----{name}{masked_phone}----：{sendele.text}')
+  except:
+      print(f'{name}注册失败')
+      res = {"statusCode": -1}
+  browser.quit()  # 关闭浏览器
 class BeijingFormatter(logging.Formatter):
     """ 自定义 Formatter，强制使用北京时间 """
     def formatTime(self, record, datefmt=None):
@@ -6112,6 +6385,16 @@ if __name__ == '__main__':
     safe_execute(h15)
     safe_execute(i15)
     safe_execute(j15)
+    safe_execute(a16)
+    safe_execute(b16)
+    safe_execute(c16)
+    safe_execute(d16)
+    safe_execute(e16)
+    safe_execute(f16)
+    safe_execute(g16)
+    safe_execute(h16)
+    safe_execute(i16)
+    safe_execute(j16)
     clear()
     # 下载 Gist 内容并打印
     gist_content = download_gist(GIST_URL)
