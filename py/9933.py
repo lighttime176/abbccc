@@ -6444,15 +6444,16 @@ if __name__ == '__main__':
     GIST_URL = f"https://gist.githubusercontent.com/lighttime176/{gist_id}/raw/{LOCAL_LOG_FILE}"
     # 下载 Gist 内容并打印
     gist_content = download_gist(GIST_URL)
-    # logger.info("\nGist 下载的日志内容:")
-    # logger.info(gist_content)
+    logger.info("\nGist 下载的日志内容:")
+    logger.info(gist_content)
     
     # 更新日志文件并打印新内容
     updated_log_content = prepend_log(LOCAL_LOG_FILE, gist_content)
-    # logger.info("\n更新后的日志文件内容:")
-    # logger.info(updated_log_content)
-    with open(LOCAL_LOG_FILE, 'r') as file:
+    logger.info("\n更新后的日志文件内容:")
+    logger.info(updated_log_content)
+    with open(LOCAL_LOG_FILE, 'r', encoding='utf-8') as file:
         log_content = file.read()
+
     upload_to_gist(gist_id, log_content)
     logger.info(f" {LOCAL_LOG_FILE}文件已成功上传到 Gist")
     logger.info("日志文件已更新！")
