@@ -8,20 +8,21 @@ import re,pytz
 import json
 import sys
 from datetime import datetime
-# 全局变量
-# phonenum = os.environ.get("ydyp")
 # masked_phone = phonenum[:3] + '****' + phonenum[-4:]
 # Gist 原始文件 URL
-
-#修改手机号，修改gistid
+# 全局变量
+#修改手机号
 phonenum = '13329989933'
-gistid = '9111f27c34cdc932f91b92c85ed0f118'
-
-
 LOCAL_LOG_FILE = f"{phonenum[-4:]}.log"
-GIST_URL = f"https://gist.githubusercontent.com/lighttime176/{gistid}/raw/{LOCAL_LOG_FILE}"
+GIST_FILENAME = LOCAL_LOG_FILE
+LOCAL_LOG_FILE = LOCAL_LOG_FILE
+GITHUB_TOKEN = os.environ.get("gist_token")
+GIST_DESCRIPTION = 'Public Gist for 2999.log'
 masked_phone = phonenum
 log_filename = LOCAL_LOG_FILE
+
+#gistid = '9111f27c34cdc932f91b92c85ed0f118'
+#GIST_URL = f"https://gist.githubusercontent.com/lighttime176/{gistid}/raw/{LOCAL_LOG_FILE}"
 
 def aliyun(tab, browser):
     
@@ -5620,9 +5621,9 @@ def a15(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
   browser.quit()  # 关闭浏览器
 
@@ -5648,9 +5649,9 @@ def b15(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -5677,9 +5678,9 @@ def c15(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -5702,9 +5703,9 @@ def d15(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -5729,9 +5730,9 @@ def e15(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -5756,9 +5757,9 @@ def f15(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -5781,9 +5782,9 @@ def g15(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
 
@@ -5804,17 +5805,17 @@ def h15(tab, browser):
   ele.input(phonenum)
   ele = tab.ele(sendele)
   tab.listen.start(targets=target)
-  # print(ele)
-  # print(ele.text)
+  # logger.info(ele)
+  # logger.info(ele.text)
   ele.click()
   time.sleep(1)
   ele.click(by_js=True)
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
   browser.quit()  # 关闭浏览器
 
@@ -5839,9 +5840,9 @@ def i15(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
   browser.quit()  # 关闭浏览器
 
@@ -5867,9 +5868,9 @@ def j15(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
   browser.quit()  # 关闭浏览器
 def create_browser():
@@ -5898,9 +5899,9 @@ def a16(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
   browser.quit()  # 关闭浏览器
 
@@ -5927,9 +5928,9 @@ def b16(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -5954,9 +5955,9 @@ def c16(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -5985,9 +5986,9 @@ def d16(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -6012,9 +6013,9 @@ def e16(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -6039,9 +6040,9 @@ def f16(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
   browser.quit()  # 关闭浏览器
@@ -6062,9 +6063,9 @@ def g16(tab, browser):
   time.sleep(2)
   try:
       ele = tab.ele('css=body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(3) > uni-button > uni-text > span')
-      print(f'----{name}{masked_phone}----：{ele.text}')
+      logger.info(f'----{name}{masked_phone}----：{ele.text}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
 
@@ -6093,9 +6094,9 @@ def h16(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
   browser.quit()  # 关闭浏览器
 
@@ -6121,9 +6122,9 @@ def i16(tab, browser):
   try:
       res = tab.listen.wait(timeout=10).response
       res = res.body
-      print(f'----{name}{masked_phone}----：{res}')
+      logger.info(f'----{name}{masked_phone}----：{res}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
   browser.quit()  # 关闭浏览器
 
@@ -6148,9 +6149,9 @@ def j16(tab, browser):
   time.sleep(3)
   sendele = tab.ele('css=#root > div > div.login-content-container > div > div > div > div > div.ud__modal__body.ud__scrollArea.ud__scrollArea-hide-bar.ud__scrollArea-y > div > div.verify_input > div > div.verify_input__input-right > div')
   try:
-      print(f'----{name}{masked_phone}----：{sendele.text}')
+      logger.info(f'----{name}{masked_phone}----：{sendele.text}')
   except:
-      print(f'{name}注册失败')
+      logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
   browser.quit()  # 关闭浏览器
 class BeijingFormatter(logging.Formatter):
@@ -6240,7 +6241,42 @@ def prepend_log(file_path, new_content):
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(combined_content)
     return combined_content  # 确保返回更新后的日志内容
+HEADERS = {
+    'Authorization': f'token {GITHUB_TOKEN}',
+    'Accept': 'application/vnd.github.v3+json'
+}
 
+def get_existing_gist():
+    response = requests.get("https://api.github.com/gists", headers=HEADERS)
+    if response.status_code == 200:
+        for gist in response.json():
+            if GIST_FILENAME in gist['files']:
+                return gist['id']
+    return None
+
+def create_gist():
+    data = {
+        "description": GIST_DESCRIPTION,
+        "public": True,
+        "files": {
+            GIST_FILENAME: {"content": "Initial placeholder"}
+        }
+    }
+    response = requests.post("https://api.github.com/gists", headers=HEADERS, json=data)
+    if response.status_code == 201:
+        return response.json()['id']
+    raise Exception("Failed to create Gist")
+
+def upload_to_gist(gist_id, content):
+    url = f"https://api.github.com/gists/{gist_id}"
+    data = {
+        "files": {
+            GIST_FILENAME: {"content": content}
+        }
+    }
+    response = requests.patch(url, headers=HEADERS, json=data)
+    if response.status_code != 200:
+        raise Exception("Failed to update Gist")
     
 if __name__ == '__main__':
     logger = setup_logger()
@@ -6396,14 +6432,26 @@ if __name__ == '__main__':
     safe_execute(i16)
     safe_execute(j16)
     clear()
+    if not os.path.exists(LOCAL_LOG_FILE):
+        raise FileNotFoundError(f"{LOCAL_LOG_FILE}文件不存在")
+    gist_id = get_existing_gist()
+    if gist_id is None:
+        gist_id = create_gist()
+        logger.info(f"创建新的 Gist，ID: {gist_id}")
+    else:
+        logger.info(f"已找到现有 Gist，ID: {gist_id}")
+    GIST_URL = f"https://gist.githubusercontent.com/lighttime176/{gist_id}/raw/{LOCAL_LOG_FILE}"
     # 下载 Gist 内容并打印
     gist_content = download_gist(GIST_URL)
-    # print("\nGist 下载的日志内容:")
-    # print(gist_content)
+    # logger.info("\nGist 下载的日志内容:")
+    # logger.info(gist_content)
     
     # 更新日志文件并打印新内容
     updated_log_content = prepend_log(LOCAL_LOG_FILE, gist_content)
-    # print("\n更新后的日志文件内容:")
-    # print(updated_log_content)
-    
-    print("日志文件已更新！")
+    # logger.info("\n更新后的日志文件内容:")
+    # logger.info(updated_log_content)
+    with open(LOCAL_LOG_FILE, 'r') as file:
+        log_content = file.read()
+    upload_to_gist(gist_id, log_content)
+    logger.info(f" {LOCAL_LOG_FILE}文件已成功上传到 Gist")
+    logger.info("日志文件已更新！")
