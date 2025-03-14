@@ -6049,27 +6049,27 @@ def f16(tab, browser):
 
 
 def g16(tab, browser):
-  url = 'https://ai.jijianzn.com/web/pages/register/mobile'
-  phoneele = 'css=' + 'body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(2) > uni-view > uni-view > uni-input > div > input'
-  sendele = 'css=' + 'body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(3) > uni-button > uni-text > span'
-  target = ''
-  name = '蜜汁ai'
-  
-  tab.get(url)
-  ele = tab.ele(phoneele)
-  ele.input(phonenum)
-  ele = tab.ele(sendele)
-  ele.click()
-  time.sleep(2)
-  try:
-      ele = tab.ele('css=body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(3) > uni-button > uni-text > span')
-      logger.info(f'----{name}{masked_phone}----：{ele.text}')
-  except:
+    url = 'https://ai.jijianzn.com/web/pages/register/mobile'
+    phoneele = 'css=' + 'body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(2) > uni-view > uni-view > uni-input > div > input'
+    sendele = 'css=' + 'body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(3) > uni-button > uni-text > span'
+    target = ''
+    name = '蜜汁ai'
+    
+    tab.get(url)
+    ele = tab.ele(phoneele)
+    ele.input(phonenum)
+    sendele = tab.ele(sendele)
+    sendele.click()
+    time.sleep(2)
+    try:
+      #ele = tab.ele('css=body > uni-app > uni-page > uni-page-wrapper > uni-page-body > uni-view > uni-view > uni-view > uni-view:nth-child(3) > uni-button > uni-text > span')
+      logger.info(f'----{name}{masked_phone}----：{sendele.text}')
+    except:
       logger.info(f'{name}注册失败')
       res = {"statusCode": -1}
 
 
-  browser.quit()  # 关闭浏览器
+    browser.quit()  # 关闭浏览器
 
 
 def h16(tab, browser):
@@ -6130,30 +6130,33 @@ def i16(tab, browser):
 
 
 def j16(tab, browser):
-  url = 'https://ask.feishu.cn/guest'
-  phoneele = 'css=' + '#root > div > div.login-content-container > div > div > div > div > div.ud__modal__body.ud__scrollArea.ud__scrollArea-hide-bar.ud__scrollArea-y > div > div.pp-mobile-input.mobile-input-container > div > div.mobile-input-right > input'
-  sendele = 'css=' + '#root > div > div.login-content-container > div > div > div > div > div.ud__modal__body.ud__scrollArea.ud__scrollArea-hide-bar.ud__scrollArea-y > div > div.verify_input > div > div.verify_input__input-right > div'
-  target = ''
-  name = '飞书'
-  
-  tab.get(url)
-  ele = tab.ele('css=#root > div > section > main > div.header-vqBzkJ > div.headerToolbarButtons-AYHMdA > div > div > span')
-  ele.click()
-  ele = tab.ele(phoneele)
-  ele.input(phonenum)
-  sendele = tab.ele(sendele)
-  
-  sendele.click()
-  ele = tab.ele('text=同意')
-  ele.click()
-  time.sleep(3)
-  sendele = tab.ele('css=#root > div > div.login-content-container > div > div > div > div > div.ud__modal__body.ud__scrollArea.ud__scrollArea-hide-bar.ud__scrollArea-y > div > div.verify_input > div > div.verify_input__input-right > div')
-  try:
-      logger.info(f'----{name}{masked_phone}----：{sendele.text}')
-  except:
-      logger.info(f'{name}注册失败')
-      res = {"statusCode": -1}
-  browser.quit()  # 关闭浏览器
+    url = 'https://ask.feishu.cn/guest'
+    phoneele = 'css=' + '#root > div > div.login-content-container > div > div > div > div > div.ud__modal__body.ud__scrollArea.ud__scrollArea-hide-bar.ud__scrollArea-y > div > div.pp-mobile-input.mobile-input-container > div > div.mobile-input-right > input'
+    sendele = 'css=' + '#root > div > div.login-content-container > div > div > div > div > div.ud__modal__body.ud__scrollArea.ud__scrollArea-hide-bar.ud__scrollArea-y > div > div.verify_input > div > div.verify_input__input-right > div'
+    target = '/auth/code/apply'
+    name = '飞书'
+    
+    tab.get(url)
+    ele = tab.ele('css=#root > div > section > main > div.header-vqBzkJ > div.headerToolbarButtons-AYHMdA > div > div > span')
+    ele.click()
+    ele = tab.ele(phoneele)
+    ele.input(phonenum)
+    sendele = tab.ele(sendele)
+    
+    sendele.click()
+    ele = tab.ele('text=Agree')
+    tab.listen.start(targets=target)
+    ele.click()
+    
+    
+    try:
+        res = tab.listen.wait(timeout=10).response
+        res = res.body
+        logger.info(f'----{name}{masked_phone}----：{res}')
+    except:
+        logger.info(f'{name}注册失败')
+        res = {"statusCode": -1}
+    browser.quit()  # 关闭浏览器
 class BeijingFormatter(logging.Formatter):
     """ 自定义 Formatter，强制使用北京时间 """
     def formatTime(self, record, datefmt=None):
@@ -6263,7 +6266,7 @@ def create_gist():
         }
     }
     response = requests.post("https://api.github.com/gists", headers=HEADERS, json=data)
-    print(response.status_code, response.json())  # 调试信息
+    logger.info(response.status_code, response.json())  # 调试信息
     if response.status_code == 201:
         return response.json()['id']
     raise Exception("Failed to create Gist")
