@@ -36,7 +36,7 @@ jobs:
     - name: 运行 Python 代码
       run: python py/9933.py
       env:
-        GH_TOKEN: ${{ secrets.GIST_TOKEN }}
+        GIST_TOKEN : ${{ secrets.GIST_TOKEN }}
 
 
     # - name: Upload 9933.log to Gist
