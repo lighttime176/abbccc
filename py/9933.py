@@ -5822,8 +5822,8 @@ def h15(tab, browser):
 
 def i15(tab, browser):
   url = 'https://www.baichuan-ai.com/home'
-  phoneele = 'css=' + '#headlessui-dialog-panel-\:r2\: > div.login-ctx.modal > div > div.login-body-innerblock > div.phone-box > input'
-  sendele = 'css=' + '#headlessui-dialog-panel-\:r2\: > div.login-ctx.modal > div > div.login-body-innerblock > div.captcha-box > button'
+  phoneele = 'css=' + r'#headlessui-dialog-panel-\:r2\: > div.login-ctx.modal > div > div.login-body-innerblock > div.phone-box > input'
+  sendele = 'css=' + r'#headlessui-dialog-panel-\:r2\: > div.login-ctx.modal > div > div.login-body-innerblock > div.captcha-box > button'
   target = '/send'
   name = '百川'
   
@@ -5939,7 +5939,7 @@ def b16(tab, browser):
 def c16(tab, browser):
   url = 'https://chat.minimaxi.com/'
   phoneele = 'css=' + '#phone'
-  sendele = 'css=' + 'body > section.fixed.bottom-0.left-0.right-0.top-0.z-\[1050\].overflow-auto > div > div > div > div.login-modal-wrapper > div.flex.h-full.justify-center > div.w-\[400px\].p-8.md\:px-\[35px\].md\:py-12 > div.w-full > form > div.flex.w-full.items-center > div:nth-child(2) > button'
+  sendele = 'css=' + r'body > section.fixed.bottom-0.left-0.right-0.top-0.z-\[1050\].overflow-auto > div > div > div > div.login-modal-wrapper > div.flex.h-full.justify-center > div.w-\[400px\].p-8.md\:px-\[35px\].md\:py-12 > div.w-full > form > div.flex.w-full.items-center > div:nth-child(2) > button'
   target = 'login/sms/send'
   name = 'minimax'
   
