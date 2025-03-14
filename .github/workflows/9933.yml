@@ -36,8 +36,6 @@ jobs:
     - name: 运行 Python 代码
       run: python py/9933.py
       env:
-        APP_ID: ${{ secrets.APP_ID }}
-        ydyp: ${{ secrets.ydyp }}
         GH_TOKEN: ${{ secrets.GIST_TOKEN }}
 
 
