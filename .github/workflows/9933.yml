@@ -1,5 +1,5 @@
 
-#ctrl 替换9933,修改gistid
+#ctrl+f 替换9933
 name: 9933
 
 on:
