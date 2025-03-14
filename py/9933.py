@@ -17,7 +17,7 @@ LOCAL_LOG_FILE = f"{phonenum[-4:]}.log"
 GIST_FILENAME = LOCAL_LOG_FILE
 LOCAL_LOG_FILE = LOCAL_LOG_FILE
 GITHUB_TOKEN = os.environ.get("gist_token")
-GIST_DESCRIPTION = 'Public Gist for 2999.log'
+GIST_DESCRIPTION = f'Public Gist for {LOCAL_LOG_FILE}'
 masked_phone = phonenum
 log_filename = LOCAL_LOG_FILE
 
@@ -6263,6 +6263,7 @@ def create_gist():
         }
     }
     response = requests.post("https://api.github.com/gists", headers=HEADERS, json=data)
+    print(response.status_code, response.json())  # 调试信息
     if response.status_code == 201:
         return response.json()['id']
     raise Exception("Failed to create Gist")
