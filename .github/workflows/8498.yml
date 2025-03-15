@@ -3,9 +3,9 @@
 name: 8498
 
 on:
-  schedule:
+  #schedule:
     # 设置为 UTC 时间，UTC23点对应北京时间7点
-    - cron: '0 */3 * * *'
+    #- cron: '0 */3 * * *'
   workflow_dispatch:
 
 permissions:
